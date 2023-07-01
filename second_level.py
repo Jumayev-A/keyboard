@@ -335,8 +335,11 @@ class Level_2(Frame):
     def close_page(self):
         if self.false<5 and self.true+1==len(self.letters):
             from tkinter import messagebox, Message
-            from playsound import playsound
-            playsound('sound/win.wav')
+            try:
+                from playsound import playsound
+                playsound('sound/win.wav')
+            except:
+                pass
             msg = messagebox.showinfo(title="Berekella!",detail=f'Siz bu tapgyry {self.true+1} dogry we {self.false} yalnys bilen gecdiniz', message='Ikinji tapgyr ustunlikli gecildi!')
             self.frame_2.destroy()
             third.Level_3(self.window, 500, 960)

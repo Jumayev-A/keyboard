@@ -12,6 +12,7 @@ window = Tk()
 
 
 
-app = first_level.Level_1(window, 500, 960)
+# app = first_level.Level_1(window, 500, 960)
+app = third.Level_3(window, 500, 960)
 
 window.mainloop()
